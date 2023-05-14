@@ -1,6 +1,6 @@
 # Python's Scripts
 
-Лучше сразу объяснить обозначения типов данных:
+Обозначения типов данных:
 * int - целое число (42);
 * float - число с запятой (1.15);
 * str - строка ("тут могла быть Ваша реклама");
@@ -44,4 +44,33 @@ while example != 0:
 	example = input('Введите пример: ')
 
 print('Программа завершилась.')
+```
+
+
+## Поиск координат(x;y) по функции:
+```
+print('Впишите функцию с переменной x')
+print('y =', end=' ')
+func = input()
+listik = []
+cycle = 0
+
+
+while func != 'Конец':
+    cycle += 1
+
+    xStart = int(input('Впишите первую границу: '))
+    xEnd = int(input('Впишите вторую границу: '))
+
+    for x in range(xStart, xEnd+1):
+        listik.append(f'({x};{eval(func)})')
+
+    print(*listik)
+    
+    print(f'''
+Впишите функцию с переменной x
+{cycle} цикл
+Или впишите "Конец"''')
+    print('y =', end=' ')
+    func = input()
 ```
